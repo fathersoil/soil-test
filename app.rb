@@ -10,8 +10,10 @@ helpers do
   end
 end
 
-get "/" do
- i = (1..5).to_a.sample
+get "/img" do
+ min_image_index = ENV.fetch("MIN_IMG_INDEX")
+ max_image_index = ENV.fetch("MAX_IMG_INDEX")
+ i = (min_image_index..max_image_index).to_a.sample
  redirect to("http://res.cloudinary.com/list101/image/upload/#{i}.png"), 301
 end
 

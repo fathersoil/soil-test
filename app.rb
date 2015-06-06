@@ -10,6 +10,11 @@ helpers do
   end
 end
 
+get "/" do
+ i = (1..5).to_a.sample
+ redirect to("http://res.cloudinary.com/list101/image/upload/#{i}.png"), 301
+end
+
 get "/tweets.css" do
   content_type "text/css"
   tweets = twitter.search(ENV.fetch("TWITTER_SEARCH_STRING"))

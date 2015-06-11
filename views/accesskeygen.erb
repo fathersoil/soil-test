@@ -1,0 +1,16 @@
+
+<div style='margin:20px;'>
+  <h4 > Please visit url and Enter your key information to generate your keys: </h4>
+
+  <strong>Visit this URL</strong>: <a href="<%= @auth_url %>" target="_blank"> <%= @auth_url %> </a>
+
+
+  <div style="padding:90px;">
+      <form action='/keys' method="POST">
+          <input type="text" name='pin_code' placeholder="Pin number here" style='font-size: 20px;'/>
+          <input type="submit" value="Submit"/>
+      </form>
+  </div>
+
+</div>
+

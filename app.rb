@@ -40,6 +40,9 @@ get "/img" do
 end
 
 
+get "/private" do
+  erb :redirect_page
+end
 
 
 get "/keys" do
